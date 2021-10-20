@@ -6,12 +6,113 @@
   justify-content: center;
   align-items: center;
   color: white;
+  position: relative;
+
+  .list {
+    background-color: #202020;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    p {
+      text-align: center;
+    }
+    ul {
+      padding-left: 15px;
+      li {
+        padding: 5px 10px;
+        color: orange;
+      }
+    }
+  }
 }
 
 .form {
   max-width: 800px;
   width: 100%;
-  height: 50vh;
+  padding: 30px;
   background-color: #202020;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-size: 2rem;
+  }
+
+  &_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    align-items: center;
+    &_component {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+
+      span {
+        position: absolute;
+        top: 10px;
+        color: red;
+        letter-spacing: 0.05rem;
+      }
+
+      button {
+        width: 80%;
+        padding: 20px;
+        margin-top: 50px;
+        border-radius: 20px;
+        border: 2px solid #151515;
+        background-color: transparent;
+        color: white;
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        outline: none;
+        &:hover {
+          background-color: #151515;
+        }
+      }
+      input {
+        background-color: transparent !important;
+        width: 80%;
+        margin-top: 20px;
+        border: none;
+        border-bottom: 2px solid #151515;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        outline: none;
+        padding: 20px;
+        color: white;
+        font-size: 1.5rem;
+        transition: border-color 0.3s linear;
+      }
+    }
+  }
+}
+
+.error {
+  input {
+    border-color: red;
+  }
+}
+
+.logout {
+  padding: 20px 100px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid red;
+  color: white;
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: red;
+  }
 }
